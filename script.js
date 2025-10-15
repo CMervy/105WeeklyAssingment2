@@ -23,8 +23,7 @@ for (let key in buttons){
 
 function play(userChoice){
     const options= ['Rock','Paper','Scissors'];
-    const compChoice=
-    options[Math.floor(Math.random()*3)];
+    const compChoice = options[Math.floor(Math.random()*3)];
     let result="";
 
     if(userChoice === compChoice){
@@ -43,10 +42,10 @@ function play(userChoice){
     } 
       round++;
   const newLine = document.createElement('div');
-  newLine.textContent = `${round}. You - ${userChoice}, Computer - ${compChoice} (${result})`;
+  newLine.innerHTML = `${round}. You - ${userChoice}, Computer - ${compChoice} (${result})`;
   resultDiv.appendChild(newLine);
 
-  scoreDiv.textContent = `Score: You - ${youScore}, Computer - ${compScore}, Tie - ${tieScore}`;
+  scoreDiv.innerHTML = `Score: You - ${youScore}, Computer - ${compScore}, Tie - ${tieScore}`;
 }
 
     
